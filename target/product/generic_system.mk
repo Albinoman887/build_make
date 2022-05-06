@@ -24,6 +24,15 @@ $(call inherit-product-if-exists, vendor/google/security/adb/vendor_key.mk)
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := relaxed
+
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+system_ext/app/GmsCompat/GmsCompat.apk \
+system_ext/app/GmsCompat/oat/arm64/GmsCompat.odex \
+system_ext/app/GmsCompat/oat/arm64/GmsCompat.vdex \
+system_ext/etc/sysconfig/whitelist_app.grapheneos.gmscompat.xml
+
+
 # Shared java libs
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \

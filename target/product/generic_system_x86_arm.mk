@@ -21,7 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_system.mk)
 $(call enforce-product-packages-exist,)
 
 # Enable mainline checking
-PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := true
+PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := relaxed
 
 PRODUCT_BUILD_CACHE_IMAGE := false
 PRODUCT_BUILD_ODM_IMAGE := false
